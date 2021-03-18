@@ -7,10 +7,11 @@
     "build": "webpack --config ./config/webpack.production.conf.js",
     "lint": "eslint .",
     "fix": "eslint . --fix",
-    "style": "stylelint ./src/style",
-    "commit": "cz"
+    "style": "stylelint ./src/style"
   },
   "devDependencies": {
+    "@commitlint/cli": "^12.0.1",
+    "@commitlint/config-conventional": "^12.0.1",
     "@typescript-eslint/eslint-plugin": "^4.18.0",
     "@typescript-eslint/parser": "^4.18.0",
     "commitizen": "^4.2.3",
@@ -55,10 +56,5 @@
   },
   "lint-staged": {
     "*.js": "eslint --cache --fix"
-  },
-  "config": {
-    "commitizen": {
-      "path": "git-cz"
-    }
   }
 }
